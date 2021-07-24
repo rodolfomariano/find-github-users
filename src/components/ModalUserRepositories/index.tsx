@@ -21,6 +21,8 @@ export function ModalUserRepositories({ userDetails, closeModal }: ModalUserRepo
   const [userRepositoriesList, setUserRepositoriesList] = useState([])
   const [userRepositoriesLink, setUserRepositoriesLink] = useState('')
 
+  const repositoriesList = userRepositoriesLink.length
+
   const [currentPage, setCurrentPage] = useState(1)
 
   const url_config = `?per_page=5&page=${currentPage}&order=DESC`
@@ -53,19 +55,22 @@ export function ModalUserRepositories({ userDetails, closeModal }: ModalUserRepo
   }, [userRepositoriesLink, url_config])
 
   useEffect(() => {
-    const intersectionObserver = new IntersectionObserver(entries => {
-      console.log(entries)
-      if (entries.some(entry => entry.isIntersecting)) {
-        setCurrentPage((currentPageInsideState) => currentPageInsideState + 1)
-      }
+    if (repositoriesList > 5) {
 
-    })
+      const intersectionObserver = new IntersectionObserver(entries => {
+        console.log(entries)
+        if (entries.some(entry => entry.isIntersecting)) {
+          setCurrentPage((currentPageInsideState) => currentPageInsideState + 1)
+        }
 
-    intersectionObserver.observe(document.querySelector('#observerModal') as any)
+      })
 
-    return () => intersectionObserver.disconnect()
+      intersectionObserver.observe(document.querySelector('#observerModal') as any)
 
-  }, [])
+      return () => intersectionObserver.disconnect()
+    }
+
+  }, [repositoriesList])
 
   return (
     <ModalUserRepositoriesStyles>
