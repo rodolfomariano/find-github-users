@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ModalUserRepositoriesStyles = styled.div`
   position: relative;
-  width: 500px;
+  max-width: 500px;
   min-height: 500px;
   border-radius: 8px;
   background-color: #2F3136;
@@ -39,6 +39,7 @@ export const ModalUserRepositoriesStyles = styled.div`
         right: 5px;
         width: 30px;
         height: 30px;
+        font-size: 16px;
         color: #ccc;
         background-color: transparent;
         padding: 8px;
