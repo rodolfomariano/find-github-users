@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const ModalUserRepositoriesStyles = styled.div`
   position: relative;
+  min-width: 300px;
   max-width: 500px;
   min-height: 500px;
   border-radius: 8px;
@@ -89,11 +90,11 @@ export const ModalUserRepositoriesStyles = styled.div`
     height: 300px;
     margin-top: 16px;
     background-color: #3b3d44;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 16px 8px;
 
     #observerModal {
-    width: 400px;
+    max-width: 400px;
     height: 50px;
     /* background-color: blue; */
   }

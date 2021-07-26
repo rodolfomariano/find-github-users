@@ -93,6 +93,7 @@ export function ModalUserRepositories({ userDetails, closeModal }: ModalUserRepo
       <span className='span_total_repositories'>Repositórios publicos {userInformation.userRepos}</span>
       <div className='repositories_list'>
         {userRepositoriesList && userRepositoriesList.map(repo => <RepositoryCard key={repo.name} title={repo.name} link={repo.html_url} />)}
+
         <div id='observerModal'></div>
       </div>
     </ModalUserRepositoriesStyles>
