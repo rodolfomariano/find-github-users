@@ -1,4 +1,4 @@
-# Project Find usrs
+# Project Find users
 
 Project using api.gihub.com to find users.
 
@@ -34,9 +34,9 @@ yarn
 Second, run the development server:
 
 ```bash
-npm run start
+npm run dev
 # or
-yarn start
+yarn dev
 ```
 
 
