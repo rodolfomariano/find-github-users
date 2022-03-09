@@ -11,7 +11,6 @@ Project using api.gihub.com to find users.
 <ul>
   <li>NextJS</li>
   <li>TypeScript</li>
-  <li>Styled-Components</li>
   <li>Framer Motion</li>
 </ul>
 
